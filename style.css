@@ -1,0 +1,109 @@
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: hsl(218, 23%, 16%);
+    overflow: hidden;
+    font-family: 'Manrope';
+    font-weight: 800;
+}
+
+.attribution {
+    position: absolute;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    color: aliceblue;
+    bottom: 5px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.advice-card {
+    position: relative;
+    height: 38%;
+    width: 25%;
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: safe;
+    align-items: center;
+    padding: 1em;
+    transform: translate(0, 5%);
+}
+
+@media screen and (min-width: 375px) {
+    .advice-card {
+        height: 55%;
+        width: 85%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .advice-card {
+        height: 40%;
+        width: 56%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .advice-card {
+        height: 40%;
+        width: 30%;
+    }
+}
+
+#the-advice {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: -0.2em;
+}
+
+#advice-number {
+    color: hsl(150, 100%, 66%);
+}
+
+.dice-img {
+    position: absolute;
+    background-color: hsl(150, 100%, 66%);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    bottom: -25px;
+}
+
+.dice-img:hover {
+    box-shadow: 0 0 50px  hsl(150, 100%, 66%);
+    cursor: pointer;
+}
+
+.dice-img img {
+    margin: auto;
+    display: block;
+    width: 40%;
+}
+
+.pattern-divider {
+    position: absolute;
+    bottom: 3em;
+}
+
