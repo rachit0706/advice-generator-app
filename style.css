@@ -8,7 +8,7 @@ body {
     margin: 0;
     background-color: hsl(218, 23%, 16%);
     overflow: hidden;
-    font-family: 'Manrope';
+    font-family: 'Manrope', 'San Serif';
     font-weight: 800;
 }
 
@@ -35,13 +35,13 @@ main {
 
 .advice-card {
     position: relative;
-    height: 38%;
+    height: auto;
     width: 25%;
     background-color: hsl(217, 19%, 24%);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: safe;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1em;
     transform: translate(0, 5%);
@@ -49,39 +49,46 @@ main {
 
 @media screen and (min-width: 375px) {
     .advice-card {
-        height: 55%;
+        /* min-height: 55%; */
         width: 85%;
+        margin: -2em;
     }
 }
 
 @media screen and (min-width: 768px) {
     .advice-card {
-        height: 35%;
+        /* min-height: 35%; */
         width: 62%;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .advice-card {
-        height: 35%;
+        /* min-height: 35%; */
         width: 46%;
     }
 }
 
 #the-advice {
+    /* position: absolute; */
+    height: auto;
     color: white;
+    margin-bottom: 1em;
+    margin-top: -0.1em;
+}
+
+#the-advice h1 {
     font-size: 28px;
     text-align: center;
-    margin-bottom: 1em;
-    margin-top: -0.2em;
 }
 
 #advice-number {
     color: hsl(150, 100%, 66%);
 }
 
-.dice-img {
+#dice-img {
     position: absolute;
+    display: block;
     background-color: hsl(150, 100%, 66%);
     height: 50px;
     width: 50px;
@@ -91,19 +98,17 @@ main {
     bottom: -25px;
 }
 
-.dice-img:hover {
-    box-shadow: 0 0 50px  hsl(150, 100%, 66%);
+#dice-img:hover {
+    box-shadow: 0 0 50px hsl(150, 100%, 66%);
     cursor: pointer;
 }
 
-.dice-img img {
+#dice-img img {
     margin: auto;
     display: block;
     width: 40%;
 }
 
 .pattern-divider {
-    position: absolute;
-    bottom: 3em;
+    margin-bottom: 1em;
 }
-

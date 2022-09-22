@@ -1,27 +1,31 @@
-const adviceAPI = "https://api.adviceslip.com/advice/";
+const adviceAPI = "https://api.adviceslip.com/advice";
 
-async function generateAdvice(){
-    const randomId = Math.floor(Math.random() * 200) + 1;
-    
-    const response = await fetch(`${adviceAPI}${randomId}`);
-    const data = await response.json()
-    const advice = data.slip;
+async function generateAdvice() {
+    try {
+        const response = await fetch(adviceAPI);
+        const data = await response.json();
+        console.log(response);
+        const advice = data.slip;
 
-    console.log(advice);
-    return advice;
+        console.log(advice);
+        return advice;
+    } catch (e) {
+        alert("Some error occured while loading data :(");
+    }
+
 }
 
-const theAdvice = document.getElementById("the-advice");
+const theAdvice = document.querySelector("#the-advice > h1");
 const adviceNum = document.getElementById("advice-number");
+const diceButton = document.getElementById("dice-img");
 
-(async function(){
-    let adviceData = await generateAdvice();
 
-    while(adviceData.advice.length > 95) {
-        adviceData = await generateAdvice();
-    }
-    console.log(adviceData.advice.length);
-    theAdvice.textContent = `"${adviceData.advice}"`;
-    adviceNum.textContent = `Advice #${adviceData.id}`;
-})();
+diceButton.addEventListener('click', async function () {
+    const adviceData = await generateAdvice();
+    const { id, advice } = adviceData;
+
+    // console.log(adviceData);
+    theAdvice.textContent = `"${advice}"`;
+    adviceNum.textContent = `Advice #${id}`;
+});
 
