@@ -43,8 +43,8 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1em;
-    transform: translate(0, 5%);
+    padding: 1.5em;
+    /* transform: translate(0, 5%); */
 }
 
 @media screen and (min-width: 375px) {
@@ -58,14 +58,14 @@ main {
 @media screen and (min-width: 768px) {
     .advice-card {
         /* min-height: 35%; */
-        width: 62%;
+        width: 50%;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .advice-card {
         /* min-height: 35%; */
-        width: 46%;
+        width: 38%;
     }
 }
 
